@@ -10,8 +10,11 @@ import Vant from 'vant'
 import 'vant/lib/index.less'
 // 引入rem适配
 import 'amfe-flexible'
+// 引入全局组件
+import MyIcon from '@/components/MyIcon.vue'
 // 注册使用vant组件库
 Vue.use(Vant)
+Vue.component('MyIcon', MyIcon)
 
 Vue.config.productionTip = false
 

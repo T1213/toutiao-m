@@ -1,9 +1,10 @@
 <template>
   <div>
     <van-nav-bar title="登陆">
-      <template #left>
+      <!-- <template #left>
         <van-icon name="cross"></van-icon>
-      </template>
+      </template> -->
+      <template #left> <MyIcon icon="cross"></MyIcon> </template>
     </van-nav-bar>
     <!-- 表单 -->
     <van-form @submit="onSubmit" ref="form">
@@ -62,7 +63,9 @@
 </template>
 
 <script>
+
 import { getSmsCode, login } from '@/api/user'
+import MyIcon from '@/components/MyIcon.vue'
 export default {
   created () { },
   data () {
@@ -104,7 +107,7 @@ export default {
   computed: {},
   watch: {},
   filters: {},
-  components: {}
+  components: { MyIcon }
 }
 </script>
 
