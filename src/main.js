@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import '@/styles/index.less'
+import '@/styles/icon.less'
 // 引入vant组件库
 import Vant from 'vant'
 // 引入vant全局样式

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <router-view></router-view>
     <h1>白马地块</h1>
+    <router-view></router-view>
   </div>
 </template>
 
