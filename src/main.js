@@ -7,7 +7,7 @@ import '@/styles/icon.less'
 // 引入vant组件库
 import Vant from 'vant'
 // 引入vant全局样式
-import 'vant/lib/index.css'
+import 'vant/lib/index.less'
 // 引入rem适配
 import 'amfe-flexible'
 // 注册使用vant组件库
