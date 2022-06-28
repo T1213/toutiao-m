@@ -1,7 +1,6 @@
 <template>
   <div>
-    父页面
-    <router-view></router-view>
+    <router-view class="main"></router-view>
     <van-tabbar route>
       <van-tabbar-item replace to="/home">
         <span>首页</span>
@@ -33,6 +32,7 @@
 
 <script>
 export default {
+  name: 'Layout',
   created () { },
   data () {
     return {}
@@ -51,5 +51,9 @@ export default {
 }
 /deep/ .van-tabbar-item__icon {
   font-size: 20px;
+}
+.main {
+  padding-bottom: 100px;
+  background-color: #f5f7f9;
 }
 </style>

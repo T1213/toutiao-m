@@ -1,10 +1,9 @@
 <template>
   <div>
-    <van-nav-bar title="登陆">
-      <!-- <template #left>
-        <van-icon name="cross"></van-icon>
-      </template> -->
-      <template #left> <MyIcon icon="cross"></MyIcon> </template>
+    <van-nav-bar title="登陆" @click-left="$router.back()">
+      <template #left>
+        <van-icon name="cross" />
+      </template>
     </van-nav-bar>
     <!-- 表单 -->
     <van-form @submit="onSubmit" ref="form">
@@ -65,12 +64,12 @@
 <script>
 
 import { getSmsCode, login } from '@/api/user'
-import MyIcon from '@/components/MyIcon.vue'
+
 export default {
   created () { },
   data () {
     return {
-      mobile: '13911111111', // 手机号
+      mobile: '15755054050', // 手机号
       code: '246810', // 短信验证码
       time: 5 * 1000,
       isCountDown: false
@@ -82,6 +81,7 @@ export default {
         const res = await login(values)
         console.log(res)
         this.$store.commit('setUser', res.data.data)
+        this.$router.push({ name: 'my' })
       } catch (error) {
         console.log(error)
       }
@@ -107,7 +107,7 @@ export default {
   computed: {},
   watch: {},
   filters: {},
-  components: { MyIcon }
+  components: {}
 }
 </script>
 

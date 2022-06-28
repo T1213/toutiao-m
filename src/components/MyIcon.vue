@@ -1,13 +1,13 @@
- <template>
-  <van-icon :name="icon"></van-icon>
+<template>
+  <i class="toutiao" :class="'toutiao-' + name"></i>
 </template>
 
 <script>
 export default {
   props: {
-    icon: {
+    name: {
       type: String,
-      require: true
+      required: true
     }
   },
   created () { },
@@ -22,5 +22,5 @@ export default {
 }
 </script>
 
-<style scoped lang='less'>
+<style scoped>
 </style>
