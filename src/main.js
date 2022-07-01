@@ -11,6 +11,11 @@ import 'vant/lib/index.less'
 import 'amfe-flexible'
 // 引入全局组件
 import MyIcon from '@/components/MyIcon.vue'
+// 引入全局过滤器
+import * as obj from '@/filters'
+Object.keys(obj).forEach(key => {
+  Vue.filter(key, obj[key])
+})
 // 注册使用vant组件库
 Vue.use(Vant)
 Vue.component('MyIcon', MyIcon)

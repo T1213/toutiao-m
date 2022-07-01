@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      import { getItem, setItem } from './src/utils/localstorge.js'
+      setItem('b', 1)
+      setItem('c', 1)
+      var b = getItem('b')
+      var c = getItem('c')
+      console.log(b + c) //11
+    </script>
+  </body>
+</html>
